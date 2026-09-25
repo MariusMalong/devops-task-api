@@ -63,7 +63,7 @@ pipeline {
                     try {
                         echo 'Deploying to Staging with docker-compose...'
                         sh 'docker compose down'
-                        sh 'docker compose up -d task-api'
+                        sh 'docker compose up -d'
                         sleep time: 10, unit: 'SECONDS'
                         // Health check validation
                         sh 'docker inspect --format="{{json .State.Health.Status}}" devops_task_api | grep "healthy"'
