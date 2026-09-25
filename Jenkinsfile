@@ -5,7 +5,7 @@ pipeline {
         IMAGE_NAME = 'devops_task_api'
         DOCKER_HUB_REPO = 'mari06/devops-task-api'
         STAGING_PORT = '8000'
-        PROD_PORT = '8080'
+        PROD_PORT = '8081'
     }
     
     triggers {
