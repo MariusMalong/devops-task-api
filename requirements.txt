@@ -1,0 +1,14 @@
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+sqlalchemy>=2.0.25
+pydantic[email]>=2.6.0
+python-jose[cryptography]>=3.3.0
+bcrypt>=4.1.2
+python-multipart>=0.0.6
+prometheus-fastapi-instrumentator>=6.1.0
+
+# Testing & Quality Tools
+pytest>=8.0.0
+httpx>=0.26.0
+bandit>=1.7.7
+flake8>=7.0.0

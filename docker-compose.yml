@@ -1,0 +1,14 @@
+services:
+  task-api:
+    build: .
+    container_name: devops_task_api
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=staging
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "python -c 'import urllib.request; urllib.request.urlopen(\"http://localhost:8000/health\")' || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
