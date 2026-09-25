@@ -1,0 +1,11 @@
+groups:
+- name: API_Alerts
+  rules:
+  - alert: InstanceDown
+    expr: up == 0
+    for: 10s
+    labels:
+      severity: critical
+    annotations:
+      summary: "API Instance {{ $labels.instance }} down"
+      description: "The Task API has been unreachable for more than 10 seconds."
